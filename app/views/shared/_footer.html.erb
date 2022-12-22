@@ -1,5 +1,21 @@
-<footer class="p-8 bg-gray-100">
+<footer class="p-0 bg-color-teal">
+<div class="shared_footer">
   <p class="text-center text-lg font-semibold mb-0">
     <%= Rails.application.class.module_parent_name %>
   </p>
+  <div class="flex">
+    <%# <div> %>
+      <div class="flex-1">
+        <ul>
+          <a href="#" class="hover:text-pink font-medium justify-start px-8">About us</a>
+        </ul>
+      </div>
+      <div class="flex-2">
+        <ul>
+          <a href="#" class="hover:text-pink font-medium justify-end px-8"><i class="fa-sharp fa-solid fa-dollar-sign"></i></a>
+        </ul>
+      </div>
+    <%# </div> %>
+  </div>
+</div>
 </footer>

@@ -85,3 +85,16 @@ img, svg {
   width: 95%;
   @apply mx-auto py-10;
 }
+
+
+.shared_footer {
+  color: white;
+  background-color: #028C92;
+  // $teal: #028C92;
+  margin: 0px
+}
+
+.shared_navbar {
+  background-color: teal;
+  color: white;
+}
