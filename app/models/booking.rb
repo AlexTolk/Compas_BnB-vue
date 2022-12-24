@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: bookings
+#
+#  id         :bigint           not null, primary key
+#  accepted   :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  flat_id    :bigint           not null
+#  user_id    :bigint           not null
+#
+# Indexes
+#
+#  index_bookings_on_flat_id  (flat_id)
+#  index_bookings_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (flat_id => flats.id)
+#  fk_rails_...  (user_id => users.id)
+#
+class Booking < ApplicationRecord
+    belongs_to :user
+    belongs_to :flat
+            
+end
