@@ -1,45 +1,66 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
-  data: {turbo: false}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.input_field :first_name, autofocus: true, autocomplete: "first-name" %>
+<div class="px-6 py-12 bg-gray-50 text-gray-800 text-center lg:text-left">
+  <div class="container mx-auto xl:px-32">
+    <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+      <div class="mt-5 lg:mt-0">
+        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Find your next <br /><span class="text-pink-600">perfect stay</span></h1>
+        <a class="inline-block px-7 py-3 mr-2 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#signup" role="button">Sign up</a>
+        <button type="button" class="inline-block px-6 py-2.5 mt-4 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out"><%= render "devise/shared/links" %></button>
+      </div>
+      <div class="mb-12 lg:mb-0">
+      <img
+        src="https://i.picsum.photos/id/58/1280/853.jpg?hmac=YO3QnOm9TpyM5DqsJjoM4CHg8oIq4cMWLpd9ALoP908"
+        class="w-full rounded-lg shadow-lg"
+        alt=""/>
+      </div>
+    </div>
   </div>
+</div>
+<div id="signup" class="block p-6 mx-auto rounded-lg shadow-lg bg-white max-w-sm">
+  <h1 class="text-2xl">Sign up</h1>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+    data: {turbo: false}) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.input_field :last_name, autofocus: true, autocomplete: "last-name" %>
-  </div>
+    <div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.input_field :first_name, autofocus: true, autocomplete: "first-name" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.input_field :gender, autofocus: true, autocomplete: "gender", as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %>
-  </div>
+    <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.input_field :last_name, autofocus: true, autocomplete: "last-name" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.label :gender %> <br/>
+      <div class="flex justify-evenly mr-40">
+        <%= f.input_field :gender, autofocus: true, autocomplete: "gender", as: :radio_buttons, collection: [['0', ' female'], ['1', ' male']], label_method: :second, value_method: :first %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="btn btn-danger mt-4 actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+
+  <button type="button" class="inline-block px-6 py-2.5 mt-4 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out"><%= render "devise/shared/links" %></button>
+
+</div>
