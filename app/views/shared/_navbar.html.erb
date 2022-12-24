@@ -1,4 +1,5 @@
 <nav class="px-8 py-4 flex flex-wrap items-center shared_navbar shadow-sm">
+
   <div class="flex text-center text-xl font-semibold mb-0">
     <div>
     <img class="w-10 h-10 mt-10 mr-4 items-center" src="https://previews.123rf.com/images/putracetol/putracetol1706/putracetol170603664/80611206-house-compass-icon-logo-design-element.jpg"  alt="">
@@ -7,19 +8,46 @@
 
   </div>
   <ul class="ml-auto flex space-x-4">
-    <li>
+    <%# <li>
       <%= link_to "Home",
                   root_path,
                   class: " hover:text-pink font-large #{current_page?(root_path) ? 'text-pink' : nil }"
       %>
-    </li>
+    <%# </li> %>
+
 
 
     <li>
-      <a href="#" class="hover:text-sky-600 font-large">Avatar</a>
+
+
     </li>
-    <li>
-    Dropdown
-    </li>
+
+
   </ul>
 </nav>
+
+    <div class="top-right">
+      <input type="checkbox" id="expand-toggle" />
+
+      <label for="expand-toggle" id="expand-btn">Avatar-img</label>
+      <table>
+
+        <tbody>
+          <tr class="expandable">
+            <td>Notifications</td>
+          </tr>
+          <tr class="expandable">
+            <td>View Profile</td>
+          </tr>
+          <tr class="expandable">
+            <td>Edit Profile</td>
+          </tr>
+          <tr class="expandable">
+            <td>Become a Host</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>

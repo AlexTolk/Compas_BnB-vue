@@ -14,6 +14,6 @@ module.exports = {
         light_teal: "#EAF7F6"
       }
     }
-  }
-  // plugins: [],
+  },
+  plugins: [require("flowbite/plugin")]
 };
