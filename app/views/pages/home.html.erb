@@ -1,6 +1,19 @@
 <div class="container">
   <div class="border-b border-teal">
     <div>
+      <% Flat.all.each do |flat| %>
+        <div>
+          <%= link_to flat_path(flat) do %>
+            <%= flat.name %>
+          <% end %>
+        </div>
+    <% end %>
+
+
+
+
+
+
       <ul class="flex flex-wrap text-sm text-center justify-evenly">
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
