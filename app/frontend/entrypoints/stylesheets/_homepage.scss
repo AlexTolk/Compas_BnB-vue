@@ -1,0 +1,23 @@
+.tabs-underlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF0263
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+  }
+}
