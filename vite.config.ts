@@ -5,11 +5,7 @@ import FullReload from "vite-plugin-full-reload";
 import RubyPlugin from "vite-plugin-ruby";
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    RubyPlugin(),
-    FullReload(["config/routes.rb", "app/views/**/*"], { delay: 250 }),
-  ],
+  plugins: [vue(), RubyPlugin(), FullReload(["config/routes.rb", "app/views/**/*"], { delay: 250 })],
   resolve: {
     alias: [
       {
@@ -21,9 +17,9 @@ export default defineConfig({
         replacement: path.resolve(__dirname, "./app/frontend/components/")
       },
       {
-        find: '@/entrypoints',
+        find: "@/entrypoints",
         replacement: path.resolve(__dirname, "./app/frontend/entrypoints")
       }
     ]
-  },
-})
+  }
+});

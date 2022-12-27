@@ -1,10 +1,9 @@
-<footer class="p-0 bg-color-teal">
-<div class="shared_footer">
-  <p class="text-center text-lg font-semibold mb-0">
-    <%= Rails.application.class.module_parent_name %>
-  </p>
-  <div class="flex">
-    <%# <div> %>
+<%# <footer class="p-0 bg-color-teal">
+  <div class="shared_footer">
+    <h6 class="text-center p-2 text-base font-semibold mb-0">
+      <%= Rails.application.class.module_parent_name %>
+    <%# </h6>
+    <div class="flex flex-wrap">
       <div class="flex-1">
         <ul>
           <a href="#" class="hover:text-pink font-medium justify-start px-8">About us</a>
@@ -15,7 +14,22 @@
           <a href="#" class="hover:text-pink font-medium justify-end px-8"><i class="fa-sharp fa-solid fa-dollar-sign"></i></a>
         </ul>
       </div>
-    <%# </div> %>
+    </div>
   </div>
-</div>
+</footer> %>
+
+
+<footer class="p-4 bg-teal shadow flex items-center justify-between md:p-6">
+    <span class="text-base font-semibold text-white sm:text-center"><%= Rails.application.class.module_parent_name %></span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-white font-semibold sm:mt-0">
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+        </li>
+        <li>
+            <a href="#" class="mr-4 md:mr-6"><i class="fa-sharp fa-solid fa-dollar-sign hover:underline"></i></a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline">Team</a>
+        </li> 
+    </ul>
 </footer>
