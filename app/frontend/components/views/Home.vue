@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
   export default {
     name: 'Home',
     props: {
@@ -31,4 +31,4 @@
       }
     }
   }
-</script>
+</script> -->
