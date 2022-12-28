@@ -1,69 +1,79 @@
 <div class="container">
   <div class="border-b border-teal">
     <div>
-      <% @flats.each do |flat| %>
-        <div>
-          <%= link_to flat_path(flat) do %>
-            <%= flat.name %>
-          <% end %>
-        </div>
-    <% end %>
-
-
-
-
-
-
       <ul class="flex flex-wrap text-sm text-center justify-evenly">
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
-
         <li>
           <a href="#" class="inline-flex p-4 rounded-t-lg flex flex-col items-center text-pink"><i class="fa-solid fa-house fa-lg"></i>
-            <h5 class="flex mt-4 text-base">Cabins</h5></a>
+            <h5 class="flex mt-4 text-base">Cabins</h5>
+          </a>
         </li>
         <div>
           <button type="button" class="items-center inline-block items-end px-6 py-2 border-2 border-teal text-pink font-medium text-xs leading-tight uppercase rounded-full mt-4 hover:bg-teal hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Filter</button>
         </div>
       </ul>
     </div>
+  </div>
+
+  <div class="container flex grid grid-cols-4 gap-4 object-contain mx-auto flex flex-wrap gap-4 border-b border-teal">
+    <% @flats.each do |flat| %>
+      <div class="rounded-lg shadow-lg bg-white max-w-sm relative">
+        <%= link_to flat_path(flat) do %>
+          <div>
+            <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
+            <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
+            <div class="p-6 relative">
+              <div class="flex justify-start">
+                <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
+              </div>
+              <h5 class="text-gray-900 font-medium mb-2"><%= flat.name %></h5>
+              <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
+              <h5 class="text-gray-900 text-base font-medium mb-2">Location: <%= flat.description %></h5>
+              <h5 class="text-gray-900 text-sm font-bold mb-2">Price: $<%= flat.price %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 
   <div class="container flex grid grid-cols-4 gap-4 object-contain mx-auto flex flex-wrap gap-4">
@@ -83,7 +93,6 @@
         <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
       </div>
     </div>
-
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <a href="#!" class="relative">
         <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
@@ -100,7 +109,6 @@
         <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
       </div>
     </div>
-
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <a href="#!" class="relative">
         <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
@@ -117,7 +125,6 @@
         <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
       </div>
     </div>
-
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <a href="#!" class="relative">
         <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
@@ -134,7 +141,6 @@
         <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
       </div>
     </div>
-
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <a href="#!" class="relative">
         <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
@@ -151,7 +157,6 @@
         <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
       </div>
     </div>
-
     <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <a href="#!" class="relative">
         <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
