@@ -4,7 +4,9 @@ module.exports = {
     "./app/views/devise/**/*.{html,html.erb,erb}",
     "./app/frontend/components/**/*.{vue,js,ts,jsx,tsx}",
     "./app/frontend/**/*.{vue,js,ts,jsx,tsx}",
-    "./app/**/*.{vue,js,ts,jsx,tsx}"
+    "./app/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js"
   ],
   theme: {
     extend: {
@@ -15,5 +17,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require("flowbite/plugin")]
+  plugins: [require("flowbite/plugin", "tw-elements/dist/plugin")]
 };

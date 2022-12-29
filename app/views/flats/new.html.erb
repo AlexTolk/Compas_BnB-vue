@@ -1,0 +1,127 @@
+
+
+<div class="container">
+<%# banner %>
+  <div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill mt-10 mb-20" style="background-image: url(https://parsonsvillas.com/scottsdale/wp-content/uploads/sites/2/2019/03/bannerVideo6-1.png)">
+    <div class="md:w-1/2">
+      <p class="font-bold text-sm uppercase backdrop-brightness-75">Become a Host</p>
+      <p class="text-3xl font-bold backdrop-brightness-75">Your home is our Adventure</p>
+      <p class="text-2xl mb-10 leading-none backdrop-brightness-75">Let's get you started!</p>
+      <a href="#" class="bg-gradient-to-r from-pink-500 to-pink-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Let's go!</a>
+    </div>
+
+  </div>
+
+
+<%# carosel %>
+  <div class="flex flex-col items-center border-t-4 border-pink mb-20">
+    <h2 class="mt-10 text-2xl"><strong> What kind of place do you want to rent out?</strong></h2>
+    <div class="container">
+      <%# <div class="carousel">
+        <div class="carousel__item carousel__item--selected">pic 1</div>
+        <div class="carousel__item">pic 2</div>
+        <div class="carousel__item">pic 3</div>
+
+      </div> %>
+    <div class="carousel">
+      <div class="carousel__item"><h2><strong>Beach Home</strong></h2>
+        <div class="flex space-x-2 justify-center ">
+          <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+        <%# absolute bottom-4 left-4 %>
+        </div>
+      </div>
+      <div class="carousel__item"><h2><strong>Castle</strong></h2>
+        <div class="flex space-x-2 justify-center ">
+          <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+        <%# absolute bottom-4 left-4 %>
+        </div>
+      </div>
+      <div class="carousel__item"><h2><strong>Tiny House</strong></h2>
+      <div class="flex space-x-2 justify-center ">
+          <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+        <%# absolute bottom-4 left-4 %>
+        </div>
+      </div>
+    </div>
+    </div >
+  </div>
+<%# Amneties %>
+  <div class="flex flex-col items-center border-t-4 border-pink">
+    <h2 class="mb-4 mt-20 text-2xl"><strong> What amneties does your rental provide?</strong></h2>
+    <div class="mb-4">
+    <%# Add "selected next to value(outside of quotes) to add default selection" %>
+      <form action="">
+        <select name="amenity" class="custom-select hidden" multiple>
+          <option value="air condition" class="w-40">air condition</option>
+          <option value="garage" class="w-40">garage</option>
+          <option value="beach access" class="w-40">beach access</option>
+          <option value="pool" class="w-40">pool</option>
+          <option value="large tv" class="w-40">large tv</option>
+          <option value="spare bathroom" class="w-40">spare bathroom</option>
+          <option value="central heating" class="w-40">central heating</option>
+          <option value="gas stove" class="w-40">gas stove</option>
+          <option value="laundry machine" class="w-40">laundry machine</option>
+          <option value="dishwasher" class="w-40">dishwasher</option>
+          <option value="deck" class="w-40">deck</option>
+          <option value="sunroom" class="w-40">sunroom</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+<%# house description %>
+  <div class="flex justify-center mt-20 mb-20 border-t-4 border-pink">
+    <div class="mb-3 mt-8 xl:w-1/2">
+      <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
+      <h2 class="text-2xl"><strong> Tell us about flat!</strong></h2>
+      </label>
+
+      <textarea
+        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        placeholder="Write a few sentences about your flat"
+      ></textarea>
+    </div>
+  </div>
+
+
+<%# ground rules/ cacncellation policy %>
+  <div class="border-t-4 border-pink flex justify-center">
+    <div class="flex justify-center mt-20">
+      <div class="mb-3 xl:w-96">
+        <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
+          <div class="text-2xl"><strong>Lets set some ground rules for your guests</strong></label>
+            <textarea
+            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Add a few ground rules">
+            </textarea>
+          </div>
+      </div>
+      <div class="flex justify-center ml-8">
+        <div class="mb-3 xl:w-96">
+          <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
+            <div class="text-2xl"><strong>How do you feel about cancellations?</strong></label>
+              <textarea
+              class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="Tell us how late we can cancel or if there are any extenuating circumstances you'd accept">
+              </textarea>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <%# scroll button %>
+  <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="inline-block p-3 bg-pink-700 text-white font-medium text-xl leading-tight uppercase rounded-full shadow-md hover:bg-teal-700 hover:shadow-lg focus:bg-teal-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg transition duration-150 ease-in-out bottom-8 right-8" id="btn-back-to-top">
+  <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-8 h-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+  </button>
+
+</div>
+<script src="./multiselect.js"></script>
+<script src="./carousel.js"></script>
+<script src="./scroll_up.js"></script>
