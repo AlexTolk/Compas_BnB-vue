@@ -72,3 +72,4 @@ gem "vite_ruby"
 gem "image_processing", "~> 1.2"
 gem "annotate", group: :development
 gem 'htmlbeautifier'
+gem 'faker'
