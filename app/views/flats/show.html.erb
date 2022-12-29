@@ -2,10 +2,10 @@
 <%# Name and favorites btn %>
   <div class="grid grid-cols-3 gap-4">
     <div class="flex justify-center col-span-2">
-      <h2 class="text-7xl">flat.name</h2>
+      <h2 class="text-7xl"><%= @flat.name %></h2>
     </div>
     <div class="flex">
-      <div class="mr-5">4/5<i class="fa-solid fa-star text-pink text-3xl"></i></div>
+      <div class="mr-5"><%= @flat.avg_rating.round(1) %><i class="fa-solid fa-star text-pink text-3xl"></i></div>
       <div><button class="position absolute-right" ><i class="fa-solid fa-heart text-teal-500 text-4xl hover:text-pink transition duration-300 ease-linear"></i></button></div>
     </div>
   </div>
