@@ -2,6 +2,19 @@
   <div>
     <h1 class="p-4 text-pink">Personal Info</h2>
   </div>
+  <div class="container">
+    <div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill mt-10 mb-20" style="background-image: url(https://parsonsvillas.com/scottsdale/wp-content/uploads/sites/2/2019/03/bannerVideo6-1.png)">
+      <div class="md:w-1/2">
+        <p class="font-bold text-sm uppercase backdrop-brightness-75">Become a Host</p>
+        <p class="text-3xl font-bold backdrop-brightness-75">Your home is our Adventure</p>
+        <p class="text-2xl mb-10 leading-none backdrop-brightness-75">Let's get you started!</p>
+        <%= link_to new_flat_path do %>
+        <button class="bg-gradient-to-r from-pink-500 to-pink-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Let's go!</button>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
   <div class="bg-gray-100">
     <div class="container mx-auto my-5 p-5">
       <h3>About</h3>
@@ -22,7 +35,7 @@
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Phone number</div>
-              <div class="px-4 py-2">+11 998001001 edit</div>
+              <div class="px-4 py-2">+11 998001001</div>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Emergency contact</div>
@@ -46,6 +59,11 @@
               <div class="px-4 py-2 font-semibold">Time zone</div>
               <div class="px-4 py-2">EST</div>
             </div>
+            <div class="relative">
+              <%= link_to edit_user_registration_path do %>
+                <div class="absolute bottom-0 right-0 px-4 py-2 font-semibold btn bg-pink hover:bg-teal text-white text-center">Edit</div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
@@ -53,7 +71,7 @@
   </div>
   <div class="bg-gray-100">
     <div class="container mx-auto my-5 p-5">
-      <h3 class="text-pink-100">Requests</h3>
+      <h3>Requests</h3>
       <div class="bg-white p-3 border-t-4 border-pink">
         <div class="text-gray-700">
           <div class="flex flex-column md:grid-cols-2 text-sm place-items-start my-4">
