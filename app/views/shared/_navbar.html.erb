@@ -1,54 +1,27 @@
 <nav class="px-8 py-4 flex flex-wrap items-center shared_navbar shadow-sm">
-
-  <div class="flex text-center text-xl font-semibold mb-0">
-    <div>
-    <img class="w-10 h-10 mt-10 mr-4 items-center" src="https://previews.123rf.com/images/putracetol/putracetol1706/putracetol170603664/80611206-house-compass-icon-logo-design-element.jpg"  alt="">
-    </div>
-    <%= Rails.application.class.module_parent_name %>
-
-  </div>
-  <ul class="ml-auto flex space-x-4">
-    <%# <li>
-      <%= link_to "Home",
-                  root_path,
-                  class: " hover:text-pink font-large #{current_page?(root_path) ? 'text-pink' : nil }"
-      %>
-    <%# </li> %>
-
-
-
-    <li>
-
-
-    </li>
-
-
-  </ul>
-</nav>
-
-    <div class="top-right">
-      <input type="checkbox" id="expand-toggle" />
-
+  <div class="flex text-center text-xl font-semibold items-center w-full justify-between">
+    <%= link_to root_path do %>
+      <div class="flex items-center">
+        <img class="w-20 h-20 mr-4 items-center rounded-lg" src="https://previews.123rf.com/images/putracetol/putracetol1706/putracetol170603664/80611206-house-compass-icon-logo-design-element.jpg"  alt="">
+        <h1>CompasBnB</h1>
+      </div>
+    <% end %>
+    <div class="">
+      <input type="checkbox" id="expand-toggle">
       <label for="expand-toggle" id="expand-btn">Avatar-img</label>
-      <table>
-
+      <table class="fixed">
         <tbody>
           <tr class="expandable">
-            <td>Notifications</td>
+            <td><%= link_to "View Profile", pages_profile_path %></td>
           </tr>
           <tr class="expandable">
-            <td>View Profile</td>
+            <td><%= link_to 'Edit profile', edit_user_registration_path %></td>
           </tr>
           <tr class="expandable">
-            <td>Edit Profile</td>
-          </tr>
-          <tr class="expandable">
-            <td>Become a Host</td>
-          </tr>
+            <td><%= link_to 'Log out', destroy_user_session_path, :method => :delete, :data => { :no_turbolink => true } %></td>
           </tr>
         </tbody>
       </table>
-
-
     </div>
-
+  </div>
+</nav>

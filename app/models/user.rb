@@ -4,6 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  avatar                 :string
+#  avatar_url             :string
 #  email                  :string           default(""), not null
 #  emergency_contact      :string
 #  encrypted_password     :string           default(""), not null
@@ -27,5 +28,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-            
 end
