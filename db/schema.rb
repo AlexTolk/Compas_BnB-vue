@@ -65,19 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_24_033302) do
     t.index ["user_id"], name: "index_flats_on_user_id"
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "phone_number"
-    t.string "emergency_contact"
-    t.string "gender"
-    t.string "avatar"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "flat_id", null: false
@@ -112,7 +99,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_24_033302) do
   add_foreign_key "bookings", "flats"
   add_foreign_key "bookings", "users"
   add_foreign_key "flats", "users"
-  add_foreign_key "profiles", "users"
   add_foreign_key "reviews", "flats"
   add_foreign_key "reviews", "users"
 end
