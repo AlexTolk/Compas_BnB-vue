@@ -17,5 +17,7 @@ module.exports = {
       }
     }
   },
-  plugins: [require("flowbite/plugin", "tw-elements/dist/plugin")]
+
+  plugins: []
+
 };
