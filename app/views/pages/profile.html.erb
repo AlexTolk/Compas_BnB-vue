@@ -23,28 +23,32 @@
           <div class="grid md:grid-cols-2 text-sm">
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">First Name</div>
-              <div class="px-4 py-2">Jane</div>
+              <div class="px-4 py-2"><%= current_user.first_name %> </div>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Last Name</div>
-              <div class="px-4 py-2">Doe</div>
+              <div class="px-4 py-2"><%= current_user.last_name %></div>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Gender</div>
-              <div class="px-4 py-2">Female</div>
+              <% if current_user.gender == 1 %>
+                <div class="px-4 py-2">female</div>
+              <% else %>
+                <div class="px-4 py-2">male</div>
+              <% end %>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Phone number</div>
-              <div class="px-4 py-2">+11 998001001</div>
+              <div class="px-4 py-2"><%= current_user.phone_number %></div>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Emergency contact</div>
-              <div class="px-4 py-2">+86 2423412364</div>
+              <div class="px-4 py-2"><%= current_user.emergency_contact %></div>
             </div>
             <div class="grid grid-cols-2">
               <div class="px-4 py-2 font-semibold">Email</div>
               <div class="px-4 py-2">
-                <a class="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
+                <a class="text-blue-800" href="mailto:<%= current_user.email %>"><%= current_user.email %></a>
               </div>
             </div>
             <div class="grid grid-cols-2">

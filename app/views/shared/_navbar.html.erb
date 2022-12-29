@@ -1,15 +1,15 @@
 <nav class="px-8 py-4 flex flex-wrap items-center shared_navbar shadow-sm">
-  <div class="flex text-center text-xl font-semibold items-center">
+  <div class="flex text-center text-xl font-semibold items-center w-full justify-between">
     <%= link_to root_path do %>
       <div class="flex items-center">
         <img class="w-20 h-20 mr-4 items-center rounded-lg" src="https://previews.123rf.com/images/putracetol/putracetol1706/putracetol170603664/80611206-house-compass-icon-logo-design-element.jpg"  alt="">
         <h1>CompasBnB</h1>
       </div>
     <% end %>
-    <div class="top-right">
-      <input type="checkbox" id="expand-toggle" />
+    <div class="">
+      <input type="checkbox" id="expand-toggle">
       <label for="expand-toggle" id="expand-btn">Avatar-img</label>
-      <table>
+      <table class="fixed">
         <tbody>
           <tr class="expandable">
             <td><%= link_to "View Profile", pages_profile_path %></td>
@@ -18,7 +18,7 @@
             <td><%= link_to 'Edit profile', edit_user_registration_path %></td>
           </tr>
           <tr class="expandable">
-            <td><%= link_to 'Log out', destroy_user_session_path %></td>
+            <td><%= link_to 'Log out', destroy_user_session_path, :method => :delete, :data => { :no_turbolink => true } %></td>
           </tr>
         </tbody>
       </table>
