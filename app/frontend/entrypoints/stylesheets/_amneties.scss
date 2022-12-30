@@ -1,0 +1,24 @@
+.select {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+max-width: 300px;
+gap: 10px;
+
+}
+
+.select__item {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  border-color: teal;
+  border-width: 4px;
+  transition: background 0.3s;
+}
+
+.select__item--selected {
+  background: #FF0263;
+  color: white;
+  border-color: #FF0263;
+
+}

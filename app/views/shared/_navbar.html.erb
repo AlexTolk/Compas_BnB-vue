@@ -1,4 +1,5 @@
 
+
 <nav class="relative w-full flex flex-wrap items-center justify-between py-4 bg-teal-400 text-white-500 hover:text-teal-700 focus:text-teal-700 shadow-lg">
   <div class="container-fluid w-full flex flex-wrap items-center justify-between  px-6">
     <div class="container-fluid flex flex-wrap items-center px-4">
@@ -52,5 +53,32 @@
           </li>
         </ul>
       </div>
+=======
+<nav class="px-8 py-4 flex flex-wrap items-center shared_navbar shadow-sm">
+  <div class="flex text-center text-xl font-semibold items-center w-full justify-between">
+    <%= link_to root_path do %>
+      <div class="flex items-center">
+        <img class="w-20 h-20 mr-4 items-center rounded-lg" src="https://previews.123rf.com/images/putracetol/putracetol1706/putracetol170603664/80611206-house-compass-icon-logo-design-element.jpg"  alt="">
+        <h1>CompasBnB</h1>
+      </div>
+    <% end %>
+    <div class="">
+      <input type="checkbox" id="expand-toggle">
+      <label for="expand-toggle" id="expand-btn">Avatar-img</label>
+      <table class="fixed">
+        <tbody>
+          <tr class="expandable">
+            <td><%= link_to "View Profile", pages_profile_path %></td>
+          </tr>
+          <tr class="expandable">
+            <td><%= link_to 'Edit profile', edit_user_registration_path %></td>
+          </tr>
+          <tr class="expandable">
+            <td><%= link_to 'Log out', destroy_user_session_path, :method => :delete, :data => { :no_turbolink => true } %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </nav>

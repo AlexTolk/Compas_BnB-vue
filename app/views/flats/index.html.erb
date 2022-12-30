@@ -67,7 +67,7 @@
     </div>
   </div>
 
-  <div class="container flex grid grid-cols-4 gap-4 object-contain mx-auto flex flex-wrap gap-4 border-b border-teal">
+  <div class="container flex grid grid-cols-4 gap-4 object-contain mx-auto flex flex-wrap gap-4">
     <% @flats.each do |flat| %>
       <div class="rounded-lg shadow-lg bg-white max-w-sm relative">
         <%= link_to flat_path(flat) do %>
@@ -76,7 +76,7 @@
             <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
             <div class="p-6 relative">
               <div class="flex justify-start">
-                <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
+                <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink"><%= flat.avg_rating.round(1) %></i>
               </div>
               <h5 class="text-gray-900 font-medium mb-2"><%= flat.name %></h5>
               <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
@@ -87,104 +87,5 @@
         <% end %>
       </div>
     <% end %>
-  </div>
-
-  <div class="container flex grid grid-cols-4 gap-4 object-contain mx-auto flex flex-wrap gap-4">
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
-    <div class="rounded-lg shadow-lg bg-white max-w-sm">
-      <a href="#!" class="relative">
-        <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
-        <i class="fas fa-heart absolute top-2 -right-14 h-20 w-20 text-white hover:text-pink"></i>
-      </a>
-      <div class="p-6 relative">
-        <div class="flex justify-start">
-          <a href="#">
-            <i class="fa-solid fa-star absolute top-2 right-2 text-xs space-x-0 hover:text-pink">4.9</i>
-          </a>
-        </div>
-        <h5 class="text-gray-900 text-lg font-medium mb-2">City: Shanghai</h5>
-        <h5 class="text-gray-900 text-base font-medium mb-2">Location: Jingan</h5>
-        <h5 class="text-gray-900 text-sm font-bold mb-2">Price: 700</h5>
-      </div>
-    </div>
   </div>
 </div>
