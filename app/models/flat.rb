@@ -22,5 +22,5 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Flat < ApplicationRecord
-            
+  belongs_to :user
 end
