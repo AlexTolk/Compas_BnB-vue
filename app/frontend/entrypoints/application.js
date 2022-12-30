@@ -8,6 +8,7 @@ import "../../views/flats/scroll_up";
 
 import { createApp } from "vue";
 import Home from "../components/views/Home.vue";
+import "tw-elements";
 
 if (document.querySelector("#home")) {
   const home = createApp(Home);
