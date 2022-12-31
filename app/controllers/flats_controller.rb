@@ -1,5 +1,7 @@
 class FlatsController < ApplicationController
   before_action :set_flats, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :null_session
+
 
   def index
     @flats = Flat.all
@@ -13,6 +15,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @flat.user = current_user
     if @flat.save
       redirect_to flat_path(@flat)
     else
@@ -39,5 +42,10 @@ class FlatsController < ApplicationController
 
   def set_flats
     @flat = Flat.find(params[:id])
+  end
+
+  def flat_params
+    params.require(:flat).permit(:name, :description, :avg_rating, :price, :user_id, :photo, :address, :city, :country, :zipcode, :state)
+
   end
 end

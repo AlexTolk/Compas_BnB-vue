@@ -3,12 +3,17 @@
 # Table name: flats
 #
 #  id           :bigint           not null, primary key
+#  address      :string
 #  availability :date
 #  avg_rating   :float
+#  city         :string
+#  country      :string
 #  description  :text
 #  details      :text
 #  name         :string
 #  price        :float
+#  state        :string
+#  zipcode      :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  user_id      :bigint           not null
