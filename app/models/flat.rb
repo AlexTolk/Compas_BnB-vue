@@ -1,9 +1,9 @@
-
 # == Schema Information
 #
 # Table name: flats
 #
 #  id           :bigint           not null, primary key
+
 #  address      :string
 #  availability :date
 #  avg_rating   :float
@@ -17,6 +17,7 @@
 #  price        :float
 #  state        :string
 #  zipcode      :integer
+
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  user_id      :bigint           not null
