@@ -6,18 +6,21 @@
         <h1>CompasBnB</h1>
       </div>
     <% end %>
-    <div class="">
+    <div class="avatar">
       <input type="checkbox" id="expand-toggle">
-      <label for="expand-toggle" id="expand-btn">Avatar-img</label>
+      <label for="expand-toggle" id="expand-btn">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-full w-20" alt="Avatar"/>
+      </label>
+
       <table class="fixed">
         <tbody>
-          <tr class="expandable">
+          <tr class="expandable text-base">
             <td><%= link_to "View Profile", pages_profile_path %></td>
           </tr>
-          <tr class="expandable">
+          <tr class="expandable text-base">
             <td><%= link_to 'Edit profile', edit_user_registration_path %></td>
           </tr>
-          <tr class="expandable">
+          <tr class="expandable text-base">
             <td><%= link_to 'Log out', destroy_user_session_path %></td>
           </tr>
         </tbody>
