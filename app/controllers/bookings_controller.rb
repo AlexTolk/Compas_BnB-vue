@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:edit, :update, :show, :destroy]
-  before_action :set_flat
+  before_action :set_flat, except: [:show]
   protect_from_forgery with: :null_session
+  skip_before_action :verify_authenticity_token
 
   def new
     @booking = Booking.new
@@ -15,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.flat = @flat
 
     if @booking.save
-      redirect_to bookings_show_path(@booking)
+      redirect_to bookings_path(@booking)
     else
       render :new, status: 422
     end
