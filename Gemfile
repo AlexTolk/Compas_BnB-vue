@@ -26,6 +26,8 @@ gem "simple_calendar", "~> 2.4"
 
 gem 'country_select'
 
+gem 'acts-as-taggable-on'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

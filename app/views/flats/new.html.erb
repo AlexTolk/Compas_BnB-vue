@@ -47,16 +47,97 @@
 <%# </div> %>
 <%= simple_form_for(@flat) do |f|%>
 <%# <%= f.input :amenities, collection: Flat::AMENITIES %>
-  <%= f.input :address  %>
-  <%= f.input :city %>
-  <%= f.input :country %>
-  <%= f.input :state %>
-  <%= f.input :zipcode %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :price %>
-  <%= f.button :submit %>
+<div class="flex flex-col items-center border-t-4 border-pink mb-20 w-full">
+      <h2 class="mb-8 mt-20 text-2xl"><strong> What amneties does your rental provide?</strong></h2>
+      <div class="mb-4">
+        <%= f.input :tag_list, as: :select, selected: Flat::AMENITIES.first, collection: Flat::AMENITIES, input_html: { class:"custom-select hidden"}, label: false%>
+       </div>
+    </div>
+
+      <%# address field %>
+  <!-- component -->
+    <%# <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center"> %>
+      <div class="container max-w-screen-lg mx-auto">
+        <%# <div>
+          <h2 class="font-semibold text-xl text-gray-600">Responsive Form</h2>
+          <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p> %>
+          <h2 class="text-center text-2xl mt-8 mb-8"><strong> Where is your flat?</strong></h2>
+          <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+              <div class="lg:col-span-2">
+                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                  <div class="md:col-span-3 border-2 border-pink">
+                    <%= f.input :address  %>
+                  </div>
+
+                  <div class="md:col-span-2 border-2 border-pink">
+                    <%= f.input :city %>
+                  </div>
+                  <div class="md:col-span-2 border-2 border-pink w-64">
+                    <%= f.input :country %>
+                  </div>
+                  <div class="md:col-span-2 border-2 border-pink">
+                    <%= f.input :state %>
+                  </div>
+                  <div class="md:col-span-1 border-2 border-pink w-52">
+                    <%= f.input :zipcode %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20">
+        <div class="mb-3 w-96">
+        <label for="formFileLg" class="form-label inline-block mb-2 text-gray-700"><h2 class="text-2xl"><strong> Time to upload a few pictures!</strong></h2></label>
+          <%= f.input :photo, as: :file, label: false, input_html: {class:""} %>
+        </div>
+      </div>
+
+    <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20"></div>
+
+      <div>
+        <h2><strong>How much did you want to charge guests?</strong></h2>
+          <h3 class="mx-auto">I would like to charge :  </h3>
+          <h3 class="ml-20"><%= f.input :price, label: "$" %> </h3>
+          <h3>per night </h3>
+
+      </div>
+
+      <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20"></div>
+
+    <div class="border-t-4 border-pink flex justify-center mb-20">
+      <div class="flex justify-center mt-20">
+        <div class="mb-3 xl:w-96 h-96">
+          <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
+            <div class="text-2xl"><strong>Lets set some ground rules for your guests</strong></label>
+              <%= f.input :ground_rules, as: :text, label: false %>
+
+            </div>
+        </div>
+        <div class="flex justify-center ml-8">
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
+              <div class="text-2xl"><strong>How do you feel about cancellations?</strong></label>
+                <%= f.input :cancellation,  as: :text, label: false  %>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   <div class="flex flex-col items-center border-t-4 border-pink pt-20 text-2xl mb-20">
+      <h2 class="mb-10"><strong> Looks like you're finished! Take a moment to check your information!</strong></h2>
+      <%# <%= f.button :submit %>
+      <button type="submit" class="w-48 px-10 py-4 bg-pink text-white font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-teal-600 hover:shadow-lg focus:bg-teal-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
+    </div>
 
 <% end %>
+
+
+              <%# <%= f.input :description, as: :text %>
+
 
         <%# Delketed material %>
 

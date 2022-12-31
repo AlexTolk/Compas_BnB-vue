@@ -6,10 +6,12 @@
 #  address      :string
 #  availability :date
 #  avg_rating   :float
+#  cancellation :text
 #  city         :string
 #  country      :string
 #  description  :text
 #  details      :text
+#  ground_rules :text
 #  name         :string
 #  price        :float
 #  state        :string
