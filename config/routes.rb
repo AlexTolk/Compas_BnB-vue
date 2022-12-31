@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   get 'pages/profile'
 
   resources :flats do
-    resources :bookings, only: [:new]
+    resources :bookings, only: [:new, :show, :create]
   end
 
-  resources :bookings, only: [:destroy, :create]
+  resources :bookings, only: [:destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
