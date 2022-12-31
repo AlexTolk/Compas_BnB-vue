@@ -3,6 +3,7 @@
 <div class="bg-white-200 py-4 px-6 rounded-lg text-teal flex justify-center items-center text-2xl">
   <div class="flex items-center flex-wrap justify-center font-bold">Your Dream Awaits</div>
 </div>
+<%= current_user.first_name %>
 <!-- Left side of the page -->
   <div class="flex">
 
@@ -117,7 +118,8 @@
     <div
       class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
       <div class="h-screen lg:min-h-screen flex items-center bg-light_teal">
-        <form method="POST" action="/flats/<%=params[:flat_id]%>/bookings" class="w-full max-w-xl mx-auto bg-light_teal rounded shadow-xl relative py-4">
+        <form  method="POST" action="/flats/<%=params[:flat_id]%>/bookings" class="w-full max-w-xl mx-auto bg-light_teal rounded shadow-xl relative py-4">
+          <%= hidden_field_tag 'authenticity_token', form_authenticity_token %>
           <div class="text-gray-900 font-medium text-xs text-center flex flex-col items-center justify-center">
             <img class="inline-flex mt-4 w-96 h-60 fill-current rounded-lg border-4 border-teal box-content shadow mb-3" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg">
             <p class="mx-2 my-3 text-2xl text-pink">
