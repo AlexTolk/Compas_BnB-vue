@@ -157,21 +157,22 @@ img, svg {
   display: inline-block;
   // margin-top: 12px;
   padding: 5px 11px;
-  background-color: #FF0263;
-  border: 1px solid;
+  background-color: transparent;
+  padding: 2px;
+  // border: 1px solid;
   border-radius: 20px;
 }
 
 /* Show hidden content when the checkbox is checked */
 #expand-toggle:checked ~ * .expandable {
   visibility: visible;
-  background-color: #FF0263;
+  background-color: teal;
 
 }
 
 /* Style the button when the checkbox is checked */
 #expand-toggle:checked ~ #expand-btn {
-  background-color: #FF0263;
+  background-color: teal;
 }
 
 .top-right {

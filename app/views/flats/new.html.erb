@@ -6,8 +6,9 @@
     <div class="md:w-1/2 backdrop-brightness-75">
       <p class="font-bold text-sm uppercase">Become a Host</p>
       <p class="text-3xl font-bold">Your home is our Adventure</p>
-      <p class="text-2xl mb-10 leading-none">Let's get you started!</p>
-      <a href="#" class="bg-gradient-to-r from-pink-500 to-pink-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Let's go!</a>
+      <p class="text-2xl mb-10 leading-none">Want to see someone elses adventure?</p>
+      <div class="w-36 bg-gradient-to-r from-pink-500 to-pink-800 py-4 px-8 text-white font-bold uppercase rounded hover:bg-gray-200 hover:text-gray-800 text-sm"><strong><%= link_to "Home Page", root_path%></strong></div>
+
     </div>
 
   </div>
@@ -57,30 +58,30 @@
       <%# address field %>
   <!-- component -->
     <%# <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center"> %>
-      <div class="container max-w-screen-lg mx-auto">
+      <div class="container max-w mx-auto">
         <%# <div>
           <h2 class="font-semibold text-xl text-gray-600">Responsive Form</h2>
           <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p> %>
-          <h2 class="text-center text-2xl mt-8 mb-8"><strong> Where is your flat?</strong></h2>
+          <h2 class="mx-auto text-center text-2xl mt-8 mb-8"><strong> Where is your flat?</strong></h2>
           <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+            <div class="justify-items-center grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
               <div class="lg:col-span-2">
-                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <div class="grid gap-4 gap-y-16 text-sm grid-cols-1 md:grid-cols-5">
                   <div class="md:col-span-3 border-2 border-pink">
-                    <%= f.input :address  %>
+                    <%= f.input :address, input_html: {class:"mr-12 "} %>
                   </div>
 
                   <div class="md:col-span-2 border-2 border-pink">
-                    <%= f.input :city %>
+                    <%= f.input :city, input_html: {class:"mr-12 w-65"}  %>
                   </div>
                   <div class="md:col-span-2 border-2 border-pink w-64">
-                    <%= f.input :country %>
+                    <%= f.input :country, input_html: {class:"mr-12 w-48"}  %>
                   </div>
-                  <div class="md:col-span-2 border-2 border-pink">
-                    <%= f.input :state %>
+                  <div class="md:col-span-2 border-2 border-pink w-64">
+                    <%= f.input :state, input_html: {class:"ml-4 w-48"}  %>
                   </div>
-                  <div class="md:col-span-1 border-2 border-pink w-52">
-                    <%= f.input :zipcode %>
+                  <div class="md:col-span-1 border-2 border-pink w-64">
+                    <%= f.input :zipcode, input_html: {class:"mr-12 w-48"}  %>
                   </div>
                 </div>
               </div>
@@ -97,19 +98,25 @@
 
     <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20"></div>
 
-      <div>
-        <h2><strong>How much did you want to charge guests?</strong></h2>
+        <h2><strong>How much did you want to charge how many guests?</strong></h2>
+      <div class =" grid grid-cols-2 gap-4">
+        <div class ="col-span-2">
           <h3 class="mx-auto">I would like to charge :  </h3>
-          <h3 class="ml-20"><%= f.input :price, label: "$" %> </h3>
+          <h3 class="ml-20"><%= f.input :price, label: "$", input_html: {class:"mr-12 border-1 border-pink"} %> </h3>
           <h3>per night </h3>
-
+        </div>
+        <%# <div class ="">
+          <h3 class="mx-auto">I would like to have no more than :  </h3>
+          <h3 class="ml-20"><%= f.input :max_guests, label: false, input_html: {class:"mr-12 border-1 border-pink"} %> </h3>
+          <%# <h3>guests </h3> %>
+        <%# </div> %>
       </div>
 
       <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20"></div>
       <div class="flex justify-center space-x-40">
         <div class="xl:w-96">
           <h2> What do you call your place?
-            <%= f.input :name, label: false %>
+            <%= f.input :name, label: false, input_html: {class:"w-96 h-68"} %>
           </h2>
         </div>
 
@@ -124,15 +131,15 @@
         <div class="mb-3 xl:w-96 h-96">
           <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
             <div class="text-2xl"><strong>Lets set some ground rules for your guests</strong></label>
-              <%= f.input :ground_rules, as: :text, label: false %>
+              <%= f.input :ground_rules, as: :text, label: false, input_html: {class:"w-96 h-96"} %>
 
             </div>
         </div>
         <div class="flex justify-center ml-8">
           <div class="mb-3 xl:w-96">
             <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">
-              <div class="text-2xl"><strong>How do you feel about cancellations?</strong></label>
-                <%= f.input :cancellation,  as: :text, label: false  %>
+              <div class="text-2xl border-l-2 border-pink pl-8"><strong>How do you feel about cancellations?</strong></label>
+                <%= f.input :cancellation,  as: :text, label: false, input_html: {class:"w-96 h-96"}  %>
               </div>
           </div>
         </div>

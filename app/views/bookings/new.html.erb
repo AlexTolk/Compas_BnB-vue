@@ -110,7 +110,6 @@
 
 
 
-
 <!-- Modal/Popup -->
 <div class="modal fade fixed bottom-2 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -118,7 +117,7 @@
     <div
       class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
       <div class="h-screen lg:min-h-screen flex items-center bg-light_teal">
-        <form method="POST" action="/bookings" class="w-full max-w-xl mx-auto bg-light_teal rounded shadow-xl relative py-4">
+        <form method="POST" action="/flats/<%=params[:flat_id]%>/bookings" class="w-full max-w-xl mx-auto bg-light_teal rounded shadow-xl relative py-4">
           <div class="text-gray-900 font-medium text-xs text-center flex flex-col items-center justify-center">
             <img class="inline-flex mt-4 w-96 h-60 fill-current rounded-lg border-4 border-teal box-content shadow mb-3" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg">
             <p class="mx-2 my-3 text-2xl text-pink">
@@ -153,7 +152,7 @@
 
             <div class="mt-4">
                 <div class="w-full">
-                    <button class="h-auto lg:h-12 text-base font-bold py-1 lg:py-2 px-2 lg-px-4 text-white tracking-wider bg-pink rounded-lg uppercase w-full hover:bg-teal" type="submit"><%= link_to "Pay",  bookings_path %></button>
+                    <button class="h-auto lg:h-12 text-base font-bold py-1 lg:py-2 px-2 lg-px-4 text-white tracking-wider bg-pink rounded-lg uppercase w-full hover:bg-teal" type="submit" >pay</button>
                 </div>
             </div>
           </div>
