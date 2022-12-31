@@ -4,6 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  avatar                 :string
+#  avatar_url             :string
 #  email                  :string           default(""), not null
 #  emergency_contact      :string
 #  encrypted_password     :string           default(""), not null

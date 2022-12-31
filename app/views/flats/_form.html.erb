@@ -1,16 +1,10 @@
-<%= simple_form_for(@flat) do |f| %>
-<div class="form-inputs">
-  <%= f.input :photo, as: :file %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :avg_rating %>
-  <%= f.input :price %>
-  <%= f.input :user_id %>
-</div class="form-action">
-<div>
-<%= f.button :submit %>
 
-</div>
-<% end %>
-<%# <%= cl_image_tag @flat.key %> %>
-</div>
+<div class="search">
+    <%= simple_form_for :search, url: flats_path, method: "GET", html: { class: 'form-inline' }, defaults: { required: false } do |f| %>
+      <div class="flexbox-class w-4">
+        <%= f.input :search, label: false, input_html: {value: ""}, class: "text-black", style: 'width:500px' %>
+        <%= f.submit "Search", class: "btn ml-10 inline-block px-6 py-2.5 bg-pink text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-500 hover:shadow-lg focus:bg-teal-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+      </div>
+    <% end %>
+  </div>
+

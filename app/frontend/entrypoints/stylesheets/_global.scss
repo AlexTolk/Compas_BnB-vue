@@ -100,9 +100,46 @@ img, svg {
   color: white;
 
 }
+// /* Hide the toggle checkbox */
+// #expand-toggle {
+//   display: none;
+// }
 
+// /* Hide expandable content by default */
+// .expandable {
+//   visibility: collapse;
+//   background: #ddd;
+//   border-radius: 2px;
+// }
 
+// /* Style the button */
+// #expand-btn {
+//   display: inline-block;
+//   margin-top: 12px;
+//   padding: 5px 11px;
+//   background-color: #FF0263;
+//   border: 1px solid;
+//   border-radius: 20px;
+// }
 
+// /* Show hidden content when the checkbox is checked */
+// #expand-toggle:checked ~ * .expandable {
+//   visibility: visible;
+//   background-color: #FF0263;
+
+// }
+
+// /* Style the button when the checkbox is checked */
+// #expand-toggle:checked ~ #expand-btn {
+//   background-color: #FF0263;
+// }
+
+// .top-right {
+//   position: absolute;
+//   top: 10px;
+//   right: 0;
+//   z-index: 1;
+// }
 /* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
@@ -118,7 +155,7 @@ img, svg {
 /* Style the button */
 #expand-btn {
   display: inline-block;
-  margin-top: 12px;
+  // margin-top: 12px;
   padding: 5px 11px;
   background-color: #FF0263;
   border: 1px solid;
@@ -142,4 +179,14 @@ img, svg {
   top: 10px;
   right: 0;
   z-index: 1;
+}
+
+.flexbox-class {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  color: black;
+  font-size: 200%;
 }
