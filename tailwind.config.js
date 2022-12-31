@@ -5,8 +5,7 @@ module.exports = {
     "./app/frontend/components/**/*.{vue,js,ts,jsx,tsx}",
     "./app/frontend/**/*.{vue,js,ts,jsx,tsx}",
     "./app/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js"
+    "./src/**/*.{html,js}"
   ],
   theme: {
     extend: {
@@ -19,6 +18,4 @@ module.exports = {
   },
 
   plugins: [require("tw-elements/dist/plugin")]
-
-
 };
