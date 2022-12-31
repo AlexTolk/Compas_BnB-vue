@@ -14,40 +14,40 @@
 
 
 <%# carosel %>
-  <div class="flex flex-col items-center border-t-4 border-pink mb-20">
-    <h2 class="mt-10 text-2xl"><strong> What kind of place do you want to rent out?</strong></h2>
-    <div class="container">
+  <%# <div class="flex flex-col items-center border-t-4 border-pink mb-20"> %>
+    <%# <h2 class="mt-10 text-2xl"><strong> What kind of place do you want to rent out?</strong></h2> %>
+    <%# <div class="container"> %>
       <%# <div class="carousel">
         <div class="carousel__item carousel__item--selected">pic 1</div>
         <div class="carousel__item">pic 2</div>
         <div class="carousel__item">pic 3</div>
 
       </div> %>
-      <div class="carousel">
-        <div class="carousel__item"><h2><strong>Beach Home</strong></h2>
-          <div class="flex space-x-2 justify-center ">
-            <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+ <%# \     <div class="carousel"> %>
+        <%# <div class="carousel__item"><h2><strong>Beach Home</strong></h2> %>
+<div class="flex space-x-2 justify-center ">
+            <%# <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button> %>
           <%# absolute bottom-4 left-4 %>
-          </div>
-        </div>
-        <div class="carousel__item"><h2><strong>Castle</strong></h2>
-          <div class="flex space-x-2 justify-center ">
-            <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+          <%# </div> %>
+        <%# </div> %>
+        <%# <div class="carousel__item"><h2><strong>Castle</strong></h2> %>
+          <%# <div class="flex space-x-2 justify-center "> %>
+            <%# <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button> %>
           <%# absolute bottom-4 left-4 %>
-          </div>
-        </div>
-        <div class="carousel__item"><h2><strong>Tiny House</strong></h2>
-        <div class="flex space-x-2 justify-center ">
-            <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button>
+          <%# </div> %>
+        <%# </div> %>
+        <%# <div class="carousel__item"><h2><strong>Tiny House</strong></h2> %>
+        <%# <div class="flex space-x-2 justify-center "> %>
+            <%# <button type="button" class="absolute bottom-4 left-4 z-40 inline-block px-6 py-2.5 bg-teal text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-teal-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out">It's most like this one!</button> %>
           <%# absolute bottom-4 left-4 %>
-        </div>
-      </div>
-    </div>
-  </div>
+        <%# </div> %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# </div> %>
 <%# </div> %>
 <%= simple_form_for(@flat) do |f|%>
 <%# <%= f.input :amenities, collection: Flat::AMENITIES %>
-<div class="flex flex-col items-center border-t-4 border-pink mb-20 w-full">
+    <div class="flex flex-col items-center border-t-4 border-pink mb-20 w-full">
       <h2 class="mb-8 mt-20 text-2xl"><strong> What amneties does your rental provide?</strong></h2>
       <div class="mb-4">
         <%= f.input :tag_list, as: :select, selected: Flat::AMENITIES.first, collection: Flat::AMENITIES, input_html: { class:"custom-select hidden"}, label: false%>
@@ -90,8 +90,8 @@
 
       <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20">
         <div class="mb-3 w-96">
-        <label for="formFileLg" class="form-label inline-block mb-2 text-gray-700"><h2 class="text-2xl"><strong> Time to upload a few pictures!</strong></h2></label>
-          <%= f.input :photo, as: :file, label: false, input_html: {class:""} %>
+        <label for="formFileLg" class="form-label inline-block mb-2 text-gray-700"><h2 class="text-2xl mb-8"><strong> Time to upload a few pictures!</strong></h2></label>
+          <%= f.input :photos, as: :file, label: false, input_html: {multiple: true, class:""} %>
         </div>
       </div>
 
@@ -106,7 +106,19 @@
       </div>
 
       <div class="flex justify-center border-t-4 pt-10 mt-20 border-pink mb-20"></div>
+      <div class="flex justify-center space-x-40">
+        <div class="xl:w-96">
+          <h2> What do you call your place?
+            <%= f.input :name, label: false %>
+          </h2>
+        </div>
 
+        <div class="xl:w-96 h-96 border-l-2 border-pink mb-20 pl-8">
+          <h2> Give us a brief description of your place!
+            <%= f.input :description, as: :text, label: false %>
+          </h2>
+        </div>
+      </div>
     <div class="border-t-4 border-pink flex justify-center mb-20">
       <div class="flex justify-center mt-20">
         <div class="mb-3 xl:w-96 h-96">
@@ -124,6 +136,7 @@
               </div>
           </div>
         </div>
+      </div>
 
       </div>
     </div>
@@ -135,7 +148,7 @@
 
 <% end %>
 
-
+</div>
               <%# <%= f.input :description, as: :text %>
 
 

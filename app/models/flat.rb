@@ -30,7 +30,7 @@
 #
 class Flat < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_many_attached :photos
   acts_as_taggable_on :tags
   # What was the name for a picture? photo, image?
   AMENITIES = ["air condition","garage","beach access", "pool", "large tv", "spare bathroom", "central heating", "gas stove", "laundry machine", "dishwasher", "deck", "sunroom"]
